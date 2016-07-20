@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="dope.dsfx3d.fpop.DetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorWhite">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/poster"
+            android:background="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Title goes here *"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RatingBar
+            android:layout_marginRight="10dp"
+            android:id="@+id/rating_bar"
+            android:layout_toRightOf="@+id/poster"
+            android:layout_below="@+id/title"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/divider"
+            android:layout_below="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <ImageView
+            android:id="@+id/backdrop"
+            android:layout_below="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+         <TextView
+            android:id="@+id/overview_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            />
+
+        <EditText
+            android:background="@color/colorWhite"
+            android:id="@+id/overview"
+            android:editable="false"
+            android:layout_below="@+id/overview_label"
+            android:textSize="13sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="There are some concepts you will need to implement in this project that are not explicitly covered in the course material."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

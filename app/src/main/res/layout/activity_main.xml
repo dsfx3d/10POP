@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dope.dsfx3d.fpop.MainActivity">
+
+
+    <TextView
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
+    <GridView
+        android:id="@+id/grid"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"/>
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_below="@+id/underline"
+        android:layout_toRightOf="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/details_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
